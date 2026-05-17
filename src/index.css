@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Dynamic fonts from Montserrat & Inter */
+  --font-sans: "Inter", sans-serif;
+  --font-headline: "Montserrat", sans-serif;
+
+  /* Nordic Bento Heritage Theme Brand Colors - Revamped for Ultra Sleek Dark Bento */
+  --color-brand-primary: #ffffff; /* Symmetrical High-contrast White */
+  --color-brand-secondary: #34d399; /* Emerald Green Active Tint */
+  --color-brand-tertiary: #fbbf24; /* Amber Gold System Status Indicator */
+  --color-brand-accent: #f43f5e; /* Terracotta Rose Guard */
+  
+  --color-scandi-bg: #09090b; /* Pure Zinc-950 Base Space */
+  --color-scandi-surface-dim: #18181b; /* Zinc-900 Card */
+  --color-scandi-container-lowest: #09090b; /* Zinc-950 */
+  --color-scandi-container-low: #18181b; /* Zinc-900 */
+  --color-scandi-container: #18181b; /* Stable Zinc-900 */
+  --color-scandi-container-high: #27272a; /* Zinc-800 Outlines and Actions */
+  --color-scandi-container-highest: #3f3f46; /* Zinc-700 Highlights */
+  --color-scandi-ink: #f4f4f5; /* Premium Zinc-100 Text */
+  --color-scandi-muted: #a1a1aa; /* Soft Zinc-400 Secondary Info */
+  --color-scandi-outline: #52525b; /* Zinc-600 */
+  --color-scandi-outline-variant: #27272a; /* Zinc-800 Grid-Bento Borders */
+
+  /* Overwrite default round values to match Bento Card radius */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-2xl: 44px;
+}
+
+/* Base resets & scandi scrollbars */
+html {
+  background-color: #09090b; /* Zinc-950 fallback */
+  color: #f4f4f5; /* Zinc-100 text */
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #09090b;
+  color: #f4f4f5;
+  margin: 0;
+}
+
+.material-icons-outlined, .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom scrollbar hides */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glass-morphism Bento element overlays */
+.bento-glass {
+  background: rgba(24, 24, 27, 0.7) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Smooth active states & outlines */
+button, a {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom visual alignment cues */
+.border-scandi-grid {
+  border-color: #27272a;
+}
+
+/* Tech grid scanlines */
+.grid-scanline {
+  background: linear-gradient(rgba(16, 185, 129, 0.1) 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(90deg, rgba(16, 185, 129, 0.03), rgba(0, 0, 0, 0));
+  background-size: 100% 4px, 6px 100%;
+}
+

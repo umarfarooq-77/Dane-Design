@@ -1,0 +1,11 @@
+{
+  "name": "Dane Design - Nordic Craft Heritage & Spatial Planner",
+  "description": "A high-end Scandinavian e-commerce gallery featuring a curated mid-century catalog, interactive design configurators, and an AI-driven interior decor planner.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
